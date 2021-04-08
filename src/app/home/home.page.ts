@@ -8,11 +8,15 @@ import { AuthService} from '../shared/services/auth.service';
 export class HomePage implements OnInit {
 
   public companyName;
+  public response: any;
   constructor(public authService:AuthService) {}
 
   ngOnInit() {}
 
   onClick() {
-    this.authService.onSearch(this.companyName).toPromise();
+    this.authService.onSearch(this.companyName).subscribe(async (res) => {
+      console.log(res);  
+      this.response =res;
+    })
   }
 }

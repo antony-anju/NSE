@@ -16,3 +16,37 @@
     <ion-button (click)="onClick()">Search</ion-button>
   </ion-item>
 </ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      Market Cap
+    </ion-col>
+    <ion-col>
+      {{response.marketCap}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      Stock P/E    
+    </ion-col>
+    <ion-col>
+      {{response.stockp/e}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      ROCE
+    </ion-col>
+    <ion-col>
+      {{response.roce}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      EPS
+    </ion-col>
+    <ion-col>
+      {{response.eps}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
